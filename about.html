@@ -3074,17 +3074,6 @@ h3 {
 .canada-signal { fill: none; stroke: var(--white); stroke-width: 2.5; stroke-linecap: round; }
 .canada-node { fill: var(--mint); stroke: #07566c; stroke-width: 2; }
 
-.about-contact { background: linear-gradient(180deg, #f7faf9, #edf6f6); }
-.about-contact .contact-layout { display: grid; grid-template-columns: minmax(0, 0.74fr) minmax(34rem, 1.26fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
-.about-contact .contact-copy { position: sticky; top: calc(var(--header-height) + 6rem); }
-.about-contact .contact-copy > p:not(.eyebrow) { max-width: 34rem; color: var(--muted); }
-.about-contact .contact-direct { display: grid; gap: 0.8rem; margin-top: 2rem; }
-.about-contact .contact-direct a { display: grid; gap: 0.15rem; border: 1px solid var(--line); border-radius: 1.2rem 0.55rem 1.2rem 0.55rem; background: rgb(255 255 255 / 70%); padding: 1rem 1.15rem; text-decoration: none; transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
-.about-contact .contact-direct a:hover,
-.about-contact .contact-direct a:focus-visible { transform: translateY(-2px); border-color: var(--teal); background: var(--white); box-shadow: var(--shadow); }
-.about-contact .contact-direct span { color: var(--teal-dark); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-.about-contact .contact-direct strong { overflow-wrap: anywhere; font-size: 1rem; }
-
 .js.motion-ok:not(.hero-ready) .about-hero-visual { opacity: 0; transform: translateY(1.5rem) scale(0.96); }
 .js.motion-ok.hero-ready .about-hero-visual { opacity: 1; transform: translateY(0) scale(1); transition: opacity 850ms cubic-bezier(0.22, 1, 0.36, 1) 180ms, transform 950ms cubic-bezier(0.22, 1, 0.36, 1) 180ms; }
 .js.motion-ok:not(.hero-ready) .about-chapter-index a { opacity: 0; transform: translateY(1rem); }
@@ -3104,8 +3093,6 @@ h3 {
   .principle-large { grid-row: 1 / span 2; }
   .principle-dark { grid-column: 1 / -1; }
   .experience-layout { gap: 3rem; }
-  .about-contact .contact-layout { grid-template-columns: 1fr; }
-  .about-contact .contact-copy { position: static; }
 }
 
 @media (max-width: 63.99rem) {
@@ -3161,8 +3148,6 @@ h3 {
   .canada-panel { grid-template-columns: 1fr; gap: 2.5rem; min-height: 0; }
   .canada-visual { width: min(100%, 25rem); justify-self: center; }
   .canada-geometry { width: 100%; height: auto; }
-  .about-contact .contact-layout { grid-template-columns: 1fr; }
-  .about-contact .contact-copy { position: static; }
 }
 
 @media (max-width: 30rem) {
@@ -3621,30 +3606,64 @@ h3 {
         </div>
       </section>
 
-      <section class="contact section about-contact" id="about-contact" data-nav-group="contact" aria-labelledby="contact-title">
-        <div class="container contact-layout">
-          <div class="contact-copy reveal">
-            <p class="eyebrow"><span></span>Project discussion</p>
-            <h2 id="contact-title">Bring your product challenge into the conversation.</h2>
-            <p>Share the product, its current stage and where support is needed.</p>
-            <div class="contact-direct">
-              <a href="mailto:sales@embedtexdesign.com"><span>Email</span><strong>sales@embedtexdesign.com</strong></a>
-              <a href="tel:+16472193589"><span>Phone</span><strong>+1 647 219 3589</strong></a>
+      <section class="contact section" id="about-contact" data-nav-group="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-panel reveal">
+            <div class="contact-copy">
+              <p class="eyebrow"><span></span>Let’s talk</p>
+              <h2 id="contact-title">Have an embedded product in mind?</h2>
+              <p>Share the product, its current stage and where support is needed.</p>
+              <address class="contact-details">
+                <a href="tel:+16472193589">
+                  <span>Phone</span>
+                  <strong>+1 647 219 3589</strong>
+                </a>
+                <a href="mailto:sales@embedtexdesign.com">
+                  <span>Email</span>
+                  <strong>sales@embedtexdesign.com</strong>
+                </a>
+              </address>
             </div>
-          </div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjQwIDIwMCIgZmlsbD0ibm9uZSI+PGVsbGlwc2UgY3g9IjEyMCIgY3k9IjE3NyIgcng9IjgyIiByeT0iMTQiIGZpbGw9IiMxMDJBNDMiIG9wYWNpdHk9Ii4xMiIvPjxlbGxpcHNlIGN4PSIxMjAiIGN5PSIxNzciIHJ4PSI2MCIgcnk9IjgiIGZpbGw9IiMxMDJBNDMiIG9wYWNpdHk9Ii4wOCIvPjxwYXRoIGQ9Ik0yNCAxMTMgMTIwIDE2OC40IDIxNiAxMTMgMjE2IDEyNSAxMjAgMTgwLjQgMjQgMTI1WiIgZmlsbD0iIzEwMkE0MyIvPjxwYXRoIGQ9Ik0xMjAgMTY4LjQgMjE2IDExMyAyMTYgMTI1IDEyMCAxODAuNFoiIGZpbGw9IiMwMDY1NjgiLz48cGF0aCBkPSJNMTIwIDU3LjYgMjE2IDExMyAxMjAgMTY4LjQgMjQgMTEzWiIgZmlsbD0iIzE3NEI1OSIgc3Ryb2tlPSIjNTVENkMyIiBzdHJva2Utb3BhY2l0eT0iLjU1IiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMjQgODYgMTIwIDE0MS40IDIxNiA4NiAyMTYgOTggMTIwIDE1My40IDI0IDk4WiIgZmlsbD0iIzAwNjU2OCIvPjxwYXRoIGQ9Ik0xMjAgMTQxLjQgMjE2IDg2IDIxNiA5OCAxMjAgMTUzLjRaIiBmaWxsPSIjMTAyQTQzIi8+PHBhdGggZD0iTTEyMCAzMC42IDIxNiA4NiAxMjAgMTQxLjQgMjQgODZaIiBmaWxsPSIjMDA3RjgyIiBzdHJva2U9IiM1NUQ2QzIiIHN0cm9rZS1vcGFjaXR5PSIuNTUiIHN0cm9rZS13aWR0aD0iMSIvPjxwYXRoIGQ9Ik0yNCA1OSAxMjAgMTE0LjQgMjE2IDU5IDIxNiA3MSAxMjAgMTI2LjQgMjQgNzFaIiBmaWxsPSIjNTVENkMyIi8+PHBhdGggZD0iTTEyMCAxMTQuNCAyMTYgNTkgMjE2IDcxIDEyMCAxMjYuNFoiIGZpbGw9IiMwMDdGODIiLz48cGF0aCBkPSJNMTIwIDMuNjAwMDAwMDAwMDAwMDAxNCAyMTYgNTkgMTIwIDExNC40IDI0IDU5WiIgZmlsbD0iIzkwRTZEOCIgc3Ryb2tlPSIjNTVENkMyIiBzdHJva2Utb3BhY2l0eT0iLjU1IiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJtMTIwIDMwIDUwIDI5LTUwIDI5LTUwLTI5WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iLjY1Ii8+PHBhdGggZD0ibTg2IDU5IDM0IDIwIDM0LTIwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDdGODIiIHN0cm9rZS13aWR0aD0iMS40Ii8+PC9zdmc+Cg==" width="240" height="200" alt="" aria-hidden="true" class="contact-art" data-parallax="-0.045">
+            <form class="enquiry-form" id="enquiry-form" novalidate>
+              <div class="form-heading">
+                <p class="route-heading">Start a project discussion</p>
+                <p id="form-help">Required fields are marked with an asterisk. Submitting prepares an email for you to review and send.</p>
+              </div>
 
-          <form class="enquiry-form reveal" id="enquiry-form" novalidate>
-            <div class="form-grid">
-              <div class="field"><label for="name">Name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-required="true"><span class="field-error" id="name-error"></span></div>
-              <div class="field"><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true"><span class="field-error" id="email-error"></span></div>
-              <div class="field"><label for="phone">Phone number <span class="optional">Optional</span></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"><span class="field-error" id="phone-error"></span></div>
-              <div class="field"><label for="company">Company name <span class="optional">Optional</span></label><input id="company" name="company" type="text" autocomplete="organization"><span class="field-error" id="company-error"></span></div>
-              <div class="field field-wide"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell us about your product, current stage and where you need support."></textarea><span class="field-error" id="message-error"></span></div>
-            </div>
-            <button class="button button-primary form-submit" type="submit">Prepare email enquiry <span aria-hidden="true">→</span></button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <p class="prototype-note">No server-side form endpoint is configured. Your email application must open and you must send the prepared message to complete the enquiry. No response-time promise is currently published.</p>
-          </form>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="enquiry-name">Name <span aria-hidden="true">*</span></label>
+                  <input id="enquiry-name" name="name" type="text" autocomplete="name" required aria-required="true">
+                  <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="field">
+                  <label for="enquiry-email">Email <span aria-hidden="true">*</span></label>
+                  <input id="enquiry-email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true">
+                  <span class="field-error" id="email-error"></span>
+                </div>
+                <div class="field">
+                  <label for="enquiry-phone">Phone number <span class="optional">Optional</span></label>
+                  <input id="enquiry-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+                  <span class="field-error" id="phone-error"></span>
+                </div>
+                <div class="field">
+                  <label for="enquiry-company">Company name <span class="optional">Optional</span></label>
+                  <input id="enquiry-company" name="company" type="text" autocomplete="organization">
+                  <span class="field-error" id="company-error"></span>
+                </div>
+                <div class="field field-wide">
+                  <label for="enquiry-message">Message <span aria-hidden="true">*</span></label>
+                  <textarea id="enquiry-message" name="message" rows="5" required aria-required="true" placeholder="Tell us about your product, current stage and where you need support."></textarea>
+                  <span class="field-error" id="message-error"></span>
+                </div>
+              </div>
+
+              <button class="button button-mint form-submit" type="submit">Prepare email enquiry <span aria-hidden="true">→</span></button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <p class="prototype-note">No server-side form endpoint is configured. Your email application must open and you must send the prepared message to complete the enquiry. No response-time promise is currently published.</p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
