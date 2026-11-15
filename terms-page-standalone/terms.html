@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Standalone review draft of the Embedtek Terms of Use.">
+    <meta name="theme-color" content="#102a43">
+    <title>Terms of Use — Embedtek review draft</title>
+    <style>
+      :root {
+        --navy: #102a43;
+        --navy-deep: #081f2f;
+        --teal: #007f82;
+        --teal-deep: #006568;
+        --mint: #55d6c2;
+        --mint-light: #90e6d8;
+        --ice: #eaf5f7;
+        --off-white: #f5f8f8;
+        --white: #fff;
+        --ink-soft: #3f5365;
+        --line: #c4d9e1;
+        --warning: #fff4d5;
+        --warning-line: #e4bd56;
+        --focus: rgba(85, 214, 194, .42);
+        --content: 76rem;
+        --reading: 48rem;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+      body {
+        margin: 0;
+        color: var(--navy);
+        background: var(--off-white);
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.75;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: inherit; }
+      a:focus-visible, summary:focus-visible {
+        outline: .22rem solid var(--mint);
+        outline-offset: .25rem;
+        border-radius: .25rem;
+      }
+      .container { width: min(calc(100% - 3rem), var(--content)); margin-inline: auto; }
+      .skip-link {
+        position: fixed;
+        z-index: 100;
+        top: 1rem;
+        left: 1rem;
+        padding: .7rem 1rem;
+        color: var(--navy-deep);
+        background: var(--mint);
+        font-weight: 800;
+        transform: translateY(-180%);
+      }
+      .skip-link:focus { transform: none; }
+      .progress { position: fixed; z-index: 90; inset: 0 0 auto; height: .25rem; background: rgba(255,255,255,.18); }
+      .progress span { display: block; width: var(--progress, 0%); height: 100%; background: var(--mint); }
+
+      .site-header { background: var(--off-white); border-bottom: 1px solid var(--line); }
+      .header-inner { min-height: 6.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { display: inline-flex; align-items: center; width: clamp(9.5rem, 14vw, 11.5rem); }
+      .brand-logo { display: block; width: 100%; height: auto; aspect-ratio: 1280 / 459; object-fit: contain; mix-blend-mode: multiply; }
+      .draft-chip { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: 999px; color: var(--teal-deep); background: var(--white); font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding-block: clamp(5rem, 11vw, 9rem) clamp(4rem, 8vw, 7rem);
+        color: var(--white);
+        background:
+          radial-gradient(circle at 82% 28%, rgba(85,214,194,.19), transparent 25rem),
+          linear-gradient(135deg, var(--navy-deep), var(--navy));
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -8rem;
+        bottom: -16rem;
+        width: 34rem;
+        aspect-ratio: 1;
+        border: 1px solid rgba(144,230,216,.18);
+        border-radius: 42% 58% 64% 36%;
+        transform: rotate(18deg);
+      }
+      .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .38fr); gap: clamp(2rem, 6vw, 6rem); align-items: end; }
+      .eyebrow { display: flex; align-items: center; gap: .85rem; margin: 0 0 1.3rem; color: var(--mint); font-size: .82rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+      .eyebrow::before { content: ""; width: 1.8rem; height: 2px; background: currentColor; }
+      h1, h2, h3 { font-family: "Manrope", "Segoe UI", Arial, sans-serif; }
+      h1 { max-width: 10ch; margin: 0; font-size: clamp(3.35rem, 8vw, 7.7rem); line-height: .88; letter-spacing: -.065em; }
+      .hero-copy { max-width: 46rem; margin: 2rem 0 0; color: #dce9ef; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.55; }
+      .hero-meta { padding: 1.5rem; border: 1px solid rgba(144,230,216,.28); border-radius: 1.4rem; background: rgba(255,255,255,.055); backdrop-filter: blur(8px); }
+      .hero-meta p { margin: 0; }
+      .hero-meta strong { display: block; margin-bottom: .25rem; color: var(--mint-light); font-family: "Manrope", "Segoe UI", Arial, sans-serif; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+      .hero-meta p + p { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid rgba(255,255,255,.14); }
+
+      .review-banner { background: var(--warning); border-bottom: 1px solid var(--warning-line); }
+      .review-banner-inner { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; padding: 1.35rem clamp(1.25rem, 3vw, 2rem); }
+      .review-banner svg { width: 1.5rem; margin-top: .2rem; color: #8c6310; }
+      .review-banner strong { font-family: "Manrope", "Segoe UI", Arial, sans-serif; }
+      .review-banner p { margin: .2rem 0 0; line-height: 1.55; }
+
+      .mobile-toc { display: none; margin-bottom: 2.5rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--white); }
+      .mobile-toc summary { cursor: pointer; padding: 1rem 1.2rem; font-weight: 800; }
+      .mobile-toc .toc { padding: 0 1.2rem 1.2rem; }
+      .policy-shell { display: grid; grid-template-columns: 16rem minmax(0, var(--reading)); gap: clamp(3rem, 7vw, 7rem); justify-content: center; padding-block: clamp(5rem, 10vw, 9rem); }
+      .toc-wrap { align-self: start; position: sticky; top: 2rem; }
+      .toc-title { margin: 0 0 1rem; color: var(--teal-deep); font-size: .76rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+      .toc { display: grid; gap: .2rem; }
+      .toc a { display: grid; grid-template-columns: 1.75rem 1fr; gap: .65rem; padding: .46rem .55rem; border-radius: .55rem; color: var(--ink-soft); font-size: .86rem; line-height: 1.35; text-decoration: none; }
+      .toc a span { color: var(--teal); font-weight: 900; }
+      .toc a:hover, .toc a[aria-current="true"] { color: var(--navy); background: var(--ice); }
+      .policy-document { min-width: 0; }
+      .document-intro { padding-bottom: clamp(3rem, 7vw, 5rem); border-bottom: 1px solid var(--line); }
+      .document-intro h2 { margin: 0 0 1rem; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.04em; }
+      .document-intro p { margin: 0; color: var(--ink-soft); font-size: 1.08rem; }
+
+      .policy-section { padding-block: clamp(3.5rem, 7vw, 5.5rem); border-bottom: 1px solid var(--line); scroll-margin-top: 2rem; }
+      .section-heading { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; align-items: start; margin-bottom: 2rem; }
+      .section-number { color: var(--teal); font-size: .8rem; font-weight: 900; letter-spacing: .08em; }
+      .policy-section h2 { margin: 0; font-size: clamp(1.75rem, 4vw, 2.65rem); line-height: 1.1; letter-spacing: -.035em; }
+      .policy-section h3 { margin: 2.2rem 0 .65rem; font-size: 1.1rem; line-height: 1.3; }
+      .policy-section p { margin: 0 0 1.15rem; color: var(--ink-soft); }
+      .policy-section ul { margin: .6rem 0 1.5rem; padding-left: 1.2rem; color: var(--ink-soft); }
+      .policy-section li + li { margin-top: .6rem; }
+      .legal-emphasis { padding: 1.5rem; border-radius: 1rem; color: var(--white); background: var(--navy); }
+      .legal-emphasis p { color: #e1edf1; }
+      .legal-emphasis p:last-child { margin-bottom: 0; }
+      .review-note { margin: 1.75rem 0; padding: 1.1rem 1.2rem; border-left: .28rem solid var(--warning-line); background: var(--warning); color: #604913; }
+      .review-note strong { display: block; margin-bottom: .25rem; color: #4f3908; font-family: "Manrope", "Segoe UI", Arial, sans-serif; }
+      .review-note p { margin: 0; color: inherit; }
+      .clause-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-block: 1.6rem; }
+      .clause-card { padding: 1.2rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--white); }
+      .clause-card strong { display: block; margin-bottom: .3rem; font-family: "Manrope", "Segoe UI", Arial, sans-serif; }
+      .clause-card p { margin: 0; font-size: .94rem; }
+      .contact-card { padding: clamp(1.5rem, 4vw, 2.5rem); border-radius: 1.5rem; color: var(--white); background: var(--teal-deep); }
+      .contact-card p { color: #e7f7f5; }
+      .contact-card a { color: var(--white); font-weight: 800; }
+
+      .site-footer { color: #dce9ef; background: var(--navy-deep); }
+      .footer-inner { min-height: 9rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+      .footer-inner p { margin: 0; }
+      .footer-inner a { color: var(--mint-light); font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: .3rem; }
+
+      @media (max-width: 860px) {
+        .hero-grid { grid-template-columns: 1fr; }
+        .hero-meta { max-width: 32rem; }
+        .policy-shell { grid-template-columns: 1fr; }
+        .toc-wrap { display: none; }
+        .mobile-toc { display: block; }
+      }
+      @media (max-width: 620px) {
+        .container { width: min(calc(100% - 2rem), var(--content)); }
+        .header-inner { min-height: 5rem; gap: .75rem; }
+        .brand { width: 7.5rem; }
+        .draft-chip { max-width: 10rem; padding: .42rem .6rem; font-size: .62rem; text-align: center; white-space: nowrap; }
+        h1 { font-size: clamp(3rem, 18vw, 4.8rem); }
+        .review-banner-inner, .section-heading { grid-template-columns: 1fr; }
+        .clause-grid { grid-template-columns: 1fr; }
+        .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      @media print {
+        .progress, .skip-link, .review-banner, .toc-wrap, .mobile-toc, .site-footer { display: none !important; }
+        body { background: #fff; color: #000; font-size: 10.5pt; }
+        .hero { padding: 0 0 2rem; color: #000; background: #fff; }
+        .hero::after { display: none; }
+        .hero-meta { border-color: #999; }
+        .hero-copy, .hero-meta p, .policy-section p { color: #222; }
+        .policy-shell { display: block; padding: 0; }
+        .policy-section { break-inside: avoid; padding-block: 1.5rem; }
+        .legal-emphasis, .contact-card { color: #000; background: #fff; border: 1px solid #999; }
+        .legal-emphasis p, .contact-card p { color: #222; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to terms</a>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img class="brand-logo" src="../assets/embedtek-logo.jpeg" alt="EmbedTek Design" width="1280" height="459">
+        </div>
+        <p class="draft-chip">Standalone review draft</p>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Legal information</p>
+            <h1 id="page-title">Terms of Use.</h1>
+            <p class="hero-copy">The rules proposed for accessing and using Embedtek’s digital services, presented as a clear review document before legal approval and website integration.</p>
+          </div>
+          <div class="hero-meta" aria-label="Document status">
+            <p><strong>Last updated</strong>19 February 2026</p>
+            <p><strong>Status</strong>Draft supplied for legal and operational review</p>
+            <p><strong>Scope</strong>Website, application and related services — confirmation required</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="review-banner" aria-label="Review warning">
+        <div class="container review-banner-inner">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v5m0 3h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <div><strong>Review copy — not approved terms.</strong><p>The supplied source refers to an app, accounts, user uploads, advertising, India, Texas, Apple distribution and arbitration. These statements must be confirmed by the client and legal counsel before publication.</p></div>
+        </div>
+      </aside>
+
+      <div class="container policy-shell">
+        <aside class="toc-wrap" aria-label="Terms sections">
+          <p class="toc-title">On this page</p>
+          <nav class="toc">
+            <a href="#acceptance"><span>01</span>Acceptance and users</a>
+            <a href="#service"><span>02</span>Service and changes</a>
+            <a href="#ownership"><span>03</span>Licence and ownership</a>
+            <a href="#restrictions"><span>04</span>Usage restrictions</a>
+            <a href="#content"><span>05</span>User content</a>
+            <a href="#accounts"><span>06</span>Accounts and identity</a>
+            <a href="#communications"><span>07</span>Communications and links</a>
+            <a href="#termination"><span>08</span>Termination</a>
+            <a href="#disclaimers"><span>09</span>Disclaimers</a>
+            <a href="#liability"><span>10</span>Liability</a>
+            <a href="#disputes"><span>11</span>Disputes</a>
+            <a href="#miscellaneous"><span>12</span>General provisions</a>
+            <a href="#apple"><span>13</span>Apple terms</a>
+            <a href="#contact"><span>14</span>Contact and copyright</a>
+          </nav>
+        </aside>
+
+        <article class="policy-document">
+          <details class="mobile-toc">
+            <summary>Browse the terms</summary>
+            <nav class="toc">
+              <a href="#acceptance"><span>01</span>Acceptance and users</a><a href="#service"><span>02</span>Service and changes</a><a href="#ownership"><span>03</span>Licence and ownership</a><a href="#restrictions"><span>04</span>Usage restrictions</a><a href="#content"><span>05</span>User content</a><a href="#accounts"><span>06</span>Accounts and identity</a><a href="#communications"><span>07</span>Communications and links</a><a href="#termination"><span>08</span>Termination</a><a href="#disclaimers"><span>09</span>Disclaimers</a><a href="#liability"><span>10</span>Liability</a><a href="#disputes"><span>11</span>Disputes</a><a href="#miscellaneous"><span>12</span>General provisions</a><a href="#apple"><span>13</span>Apple terms</a><a href="#contact"><span>14</span>Contact and copyright</a>
+            </nav>
+          </details>
+
+          <header class="document-intro">
+            <h2>Before using the Embedtek Service</h2>
+            <p>This standalone page formats the supplied Terms of Use for review. It does not confirm that every product feature, legal jurisdiction or operational statement described below applies to the current Embedtek website.</p>
+          </header>
+
+          <section class="policy-section" id="acceptance">
+            <div class="section-heading"><span class="section-number">01</span><h2>Acceptance and authorized users</h2></div>
+            <p>These Terms are proposed as a legal contract between users aged 18 or older and Embedtek Private Limited for use of the Embedtek application, websites, products and services collectively described as the “Embedtek Service.” By accessing, installing, browsing, registering for, subscribing to or using the Service, users acknowledge that they have read, understood and agree to these Terms.</p>
+            <p>If a user does not agree with the Terms, the supplied document instructs them to stop using the Service. Access and use must comply with applicable international, federal, state and local laws and regulations.</p>
+            <div class="review-note"><strong>Confirmation required</strong><p>Confirm the exact legal entity name, whether an application exists, the intended service scope and whether an 18+ restriction is appropriate for the actual website.</p></div>
+          </section>
+
+          <section class="policy-section" id="service">
+            <div class="section-heading"><span class="section-number">02</span><h2>Service features, privacy and changes</h2></div>
+            <p>Specific features may be governed by additional posted guidelines. The supplied Terms incorporate those guidelines and the Embedtek Privacy Policy by reference.</p>
+            <p>Embedtek may revise the Terms from time to time. Continued use after revised Terms are posted is described as acceptance of those revisions. The source also states that service feedback should not be used as the basis for civil or commercial activity or purchasing decisions.</p>
+            <div class="review-note"><strong>Publication requirement</strong><p>The final page needs an approved Privacy Policy destination and a reliable method for notifying users when legally material terms change.</p></div>
+          </section>
+
+          <section class="policy-section" id="ownership">
+            <div class="section-heading"><span class="section-number">03</span><h2>Limited licence and ownership</h2></div>
+            <p>The supplied Terms grant users a limited, revocable, non-transferable, non-exclusive and non-sublicensable licence to use the Service for private, non-commercial purposes.</p>
+            <p>Embedtek claims ownership of the visual interfaces, information, graphics, design, software, algorithms, services and other materials it provides. Those materials may be protected by copyright, trade dress, patent, trademark and other intellectual-property laws.</p>
+            <p>Unless expressly authorized, users may not sell, license, distribute, copy, modify, publicly perform or display, transmit, publish, adapt, decompile, disassemble, reverse engineer or create derivative works from Embedtek materials.</p>
+            <div class="review-note"><strong>Jurisdiction review</strong><p>The source specifically cites Indian intellectual-property law. Confirm the operating entity, ownership chain and governing jurisdictions before keeping this statement.</p></div>
+          </section>
+
+          <section class="policy-section" id="restrictions">
+            <div class="section-heading"><span class="section-number">04</span><h2>Usage restrictions</h2></div>
+            <p>Users may not use the Service for unlawful or prohibited purposes or access materials from territories where the content is illegal. The source prohibits activity that could damage, disable, overburden or impair the Service or interfere with another user’s access.</p>
+            <ul>
+              <li>No malicious code, hacking, password mining or unauthorized access.</li>
+              <li>No bypassing security, content protection or service limitations.</li>
+              <li>No unauthorized scraping, robots, spiders, framing or hidden trademark use.</li>
+              <li>No objectionable deep links, unauthorized logo use or unsolicited bulk messages.</li>
+            </ul>
+            <p>Users are responsible for complying with local rules concerning intellectual property, internet use, technology, data, email and privacy.</p>
+          </section>
+
+          <section class="policy-section" id="content">
+            <div class="section-heading"><span class="section-number">05</span><h2>User content</h2></div>
+            <h3>Prohibited content</h3>
+            <p>The source prohibits content that violates law, threatens national interests or security, promotes discrimination or hatred, undermines social stability, contains obscenity, pornography, gambling, violence or terror, defames others, infringes rights or contains abusive or threatening information.</p>
+            <h3>Licence to submitted content</h3>
+            <p>The supplied document proposes a worldwide, non-exclusive, irrevocable, royalty-free, perpetual, sublicensable and transferable licence for Embedtek to use, distribute, reproduce, adapt, publish, translate, perform and display content uploaded or published through the Service. It also proposes rights to remove infringing content and suspend users.</p>
+            <h3>User representations</h3>
+            <p>Users are expected to own or hold the permissions needed for their content and to ensure that it does not infringe intellectual-property, privacy, reputation, name, moral or other legal rights.</p>
+            <div class="review-note"><strong>High-priority legal review</strong><p>The current marketing website does not appear to offer public user publishing. Confirm whether uploads or user-generated content exist before including this extensive licence.</p></div>
+          </section>
+
+          <section class="policy-section" id="accounts">
+            <div class="section-heading"><span class="section-number">06</span><h2>Identity and account information</h2></div>
+            <p>The source authorizes Embedtek and its providers to make inquiries considered necessary to validate registration. Users must provide true, accurate, current and complete information and keep it updated.</p>
+            <p>Users are responsible for protecting passwords, restricting access to their devices and accepting responsibility for activities occurring through their accounts. Suspected loss, theft or unauthorized disclosure should be reported to Embedtek.</p>
+            <div class="review-note"><strong>Feature confirmation</strong><p>Remove or rewrite this section if the final website has no registration, passwords, user accounts or identity-authentication process.</p></div>
+          </section>
+
+          <section class="policy-section" id="communications">
+            <div class="section-heading"><span class="section-number">07</span><h2>Communications, feedback and third parties</h2></div>
+            <h3>Electronic communications</h3>
+            <p>Users consent to receive notices electronically by email or through the Service. The supplied copy states that email notice is deemed given 24 hours after sending unless the address is invalid, and mailed notice is deemed given three days after mailing.</p>
+            <h3>Feedback</h3>
+            <p>Suggestions, comments, ideas and know-how submitted to Embedtek are not treated as confidential and may be used without compensation.</p>
+            <h3>Third-party sites</h3>
+            <p>Linked sites are provided for convenience. Embedtek does not endorse or warrant their content, products or services, and users access them at their own risk. The source also addresses dealings with advertisers and permits Embedtek to change or discontinue content or services without notice.</p>
+          </section>
+
+          <section class="policy-section" id="termination">
+            <div class="section-heading"><span class="section-number">08</span><h2>Termination and availability</h2></div>
+            <p>The source reserves a broad right for Embedtek to terminate accounts or discontinue parts of the Service, licensed content, linked content, user content or third-party content at any time. Suspected fraudulent, abusive or illegal activity may be referred to law-enforcement authorities.</p>
+            <p>The supplied document states that Embedtek is not responsible for deletion, loss or failure to store user content and disclaims liability to users or third parties for termination.</p>
+            <div class="review-note"><strong>Operational review</strong><p>This clause should match the actual account, content-storage, backup, notice and deletion processes.</p></div>
+          </section>
+
+          <section class="policy-section" id="disclaimers">
+            <div class="section-heading"><span class="section-number">09</span><h2>Disclaimers and no warranties</h2></div>
+            <div class="legal-emphasis">
+              <p>To the fullest extent permitted by applicable law, the supplied Terms disclaim express and implied warranties, including merchantability, fitness for a particular purpose and non-infringement. They do not guarantee that the Service will meet requirements or operate without interruption, delay, security issues or error.</p>
+              <p>The source lists potential data loss, delays, non-delivery, system downtime, misdelivery, outages, file corruption and service interruption. Some jurisdictions may not allow all proposed exclusions or limitations.</p>
+            </div>
+            <div class="review-note"><strong>Legal approval required</strong><p>Warranty exclusions and consumer-rights language must be reviewed for every jurisdiction in which the website or service will be offered.</p></div>
+          </section>
+
+          <section class="policy-section" id="liability">
+            <div class="section-heading"><span class="section-number">10</span><h2>Indemnification and limitation of liability</h2></div>
+            <p>The supplied Terms require users to indemnify Embedtek, affiliated companies, suppliers and partners against claims, losses, damages, liabilities and legal fees arising from misuse, breach of the Terms or infringement of another party’s rights.</p>
+            <p>They exclude special, indirect, incidental, consequential and exemplary damages to the extent permitted by law. They also propose a total liability cap of one hundred dollars for claims relating to the Terms or use of the Service, including certain third-party products and services.</p>
+            <div class="review-note"><strong>Currency and enforceability</strong><p>The source does not specify the currency for the $100 cap. Confirm the amount, currency, consumer-law exceptions and enforceability with legal counsel.</p></div>
+          </section>
+
+          <section class="policy-section" id="disputes">
+            <div class="section-heading"><span class="section-number">11</span><h2>Disputes, arbitration and governing law</h2></div>
+            <p>The supplied document requires a written claim and good-faith negotiation before arbitration may be requested after 60 days. It proposes individual binding arbitration administered by the International Centre for Dispute Resolution under its International Arbitration Rules.</p>
+            <div class="clause-grid">
+              <div class="clause-card"><strong>Proposed tribunal</strong><p>Three arbitrators: one selected by each party and a third selected by the first two.</p></div>
+              <div class="clause-card"><strong>Proposed seat</strong><p>SIPCOT Industrial Complex, Karaikal 609602, India, with proceedings in English.</p></div>
+            </div>
+            <p>The source describes a final and binding award, limited court review, recovery of arbitration costs and legal fees, and authority to issue interim or injunctive relief.</p>
+            <div class="review-note"><strong>Conflicting governing-law language</strong><p>The source refers to India, Tamil Nadu and Texas while earlier website material describes current operations in Canada. This section must not be published until the governing law, court jurisdiction, arbitration body, seat and dispute address are reconciled.</p></div>
+          </section>
+
+          <section class="policy-section" id="miscellaneous">
+            <div class="section-heading"><span class="section-number">12</span><h2>General provisions</h2></div>
+            <div class="clause-grid">
+              <div class="clause-card"><strong>Waiver</strong><p>A waiver must be written, and one waiver does not automatically waive later breaches.</p></div>
+              <div class="clause-card"><strong>Severability</strong><p>An unenforceable provision does not invalidate the remaining Terms.</p></div>
+              <div class="clause-card"><strong>Assignment</strong><p>Users may not transfer these Terms; the source allows Embedtek to assign them.</p></div>
+              <div class="clause-card"><strong>Entire agreement</strong><p>The Terms are proposed as the full agreement concerning their subject matter.</p></div>
+            </div>
+            <p>The source also includes survival and heading clauses and proposes a one-year deadline for commencing claims relating to the Service.</p>
+            <div class="review-note"><strong>Broken references</strong><p>The survival clause cites numbered sections that do not consistently match the supplied document structure. Renumbering requires legal verification.</p></div>
+          </section>
+
+          <section class="policy-section" id="apple">
+            <div class="section-heading"><span class="section-number">13</span><h2>Apple App Store terms</h2></div>
+            <p>The supplied source contains end-user terms for an iOS application downloaded from Apple’s App Store. It states that the agreement is between the user and Embedtek, that Apple does not provide maintenance or support, and that Apple is not responsible for product, regulatory or intellectual-property claims concerning the app.</p>
+            <p>It also describes Apple and its subsidiaries as third-party beneficiaries entitled to enforce the Terms.</p>
+            <div class="review-note"><strong>Product confirmation</strong><p>Include this section only if an Embedtek iOS application is distributed through Apple’s App Store and legal counsel confirms the required current language.</p></div>
+          </section>
+
+          <section class="policy-section" id="contact">
+            <div class="section-heading"><span class="section-number">14</span><h2>Contact and copyright notices</h2></div>
+            <p>The source invites questions, complaints and claims about the Service and provides a copyright-notice process modelled on the United States Digital Millennium Copyright Act.</p>
+            <div class="contact-card">
+              <h3>Source-supplied contact</h3>
+              <p><strong>embedtek Private Limited.</strong><br>Postal address: To be confirmed</p>
+              <p>Email: <a href="mailto:sales@embedtekdesign.com">sales@embedtekdesign.com</a></p>
+            </div>
+            <h3>Proposed copyright notice requirements</h3>
+            <ul>
+              <li>A physical or electronic signature from an authorized person.</li>
+              <li>Identification of the copyrighted work and disputed material.</li>
+              <li>Information sufficient to locate the material.</li>
+              <li>The claimant’s address, telephone number and email address.</li>
+              <li>Good-faith and accuracy statements, including authority to act.</li>
+            </ul>
+            <div class="review-note"><strong>Contact and DMCA review</strong><p>Confirm the company’s full registered name and postal address, the correct email domain, whether a designated copyright agent exists and whether a US-specific DMCA process applies.</p></div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© Embedtek. Standalone legal review draft — not linked from the main website.</p>
+        <a href="#main-content">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const progress = document.querySelector(".progress span");
+        const links = Array.from(document.querySelectorAll(".toc a"));
+        const sections = [...new Set(links.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean))];
+        const updateProgress = () => {
+          const root = document.documentElement;
+          const available = Math.max(1, root.scrollHeight - innerHeight);
+          const value = Math.min(100, Math.max(0, (scrollY / available) * 100));
+          progress?.style.setProperty("--progress", `${value.toFixed(2)}%`);
+        };
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver((entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+            if (!visible) return;
+            links.forEach((link) => {
+              if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "true");
+              else link.removeAttribute("aria-current");
+            });
+          }, { rootMargin: "-18% 0px -68%", threshold: [0, .1] });
+          sections.forEach((section) => observer.observe(section));
+        }
+        addEventListener("scroll", updateProgress, { passive: true });
+        addEventListener("resize", updateProgress, { passive: true });
+        updateProgress();
+      })();
+    </script>
+  </body>
+</html>

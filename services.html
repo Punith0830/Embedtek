@@ -205,40 +205,25 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   flex: none;
-  color: var(--navy);
-  font-family: "Manrope", system-ui, sans-serif;
-  font-size: 1.35rem;
-  font-weight: 750;
+  width: clamp(9.5rem, 14vw, 11.5rem);
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 2.25rem;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border-radius: 0.7rem;
-  background: var(--teal);
-  color: var(--white);
-  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 459;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.brand:hover .brand-mark,
-.brand:focus-visible .brand-mark {
-  transform: rotate(-6deg) scale(1.06);
-  background: var(--teal-dark);
-  box-shadow: 0 8px 18px rgb(16 42 67 / 18%);
-}
-
-.brand-mark svg {
-  width: 1.5rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.brand:hover .brand-logo,
+.brand:focus-visible .brand-logo {
+  transform: translateY(-1px) scale(1.015);
+  opacity: 0.88;
 }
 
 .primary-nav {
@@ -1707,8 +1692,7 @@ h3 {
   body { font-size: 0.96rem; }
   .container { width: min(calc(100% - 2.5rem), var(--container)); }
   .primary-nav { right: 1.25rem; left: 1.25rem; }
-  .brand { font-size: 1.15rem; }
-  .brand-mark { width: 2rem; }
+  .brand { width: 8.75rem; }
 
   .hero {
     min-height: 0;
@@ -1924,7 +1908,7 @@ h3 {
     display: none;
   }
 
-  .brand-mark,
+  .brand-logo,
   .button,
   .process-step,
   .service-card,
@@ -2688,14 +2672,7 @@ h3 {
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="index.html#top" aria-label="Embedtek home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" focusable="false">
-              <rect x="8" y="8" width="16" height="16" rx="3"></rect>
-              <rect x="12" y="12" width="8" height="8" rx="1"></rect>
-              <path d="M12 3v5m8-5v5M12 24v5m8-5v5M3 12h5m-5 8h5m16-8h5m-5 8h5"></path>
-            </svg>
-          </span>
-          <span>embedtek</span>
+          <img class="brand-logo" src="assets/embedtek-logo.jpeg" alt="EmbedTek Design" width="1280" height="459">
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>

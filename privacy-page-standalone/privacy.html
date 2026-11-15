@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Standalone review draft of the Embedtek privacy policy.">
+    <meta name="theme-color" content="#102a43">
+    <title>Privacy Policy — Embedtek review draft</title>
+    <style>
+      :root {
+        --navy: #102a43;
+        --navy-deep: #081f2f;
+        --teal: #007f82;
+        --teal-deep: #006568;
+        --mint: #55d6c2;
+        --mint-light: #90e6d8;
+        --ice: #eaf5f7;
+        --off-white: #f5f8f8;
+        --white: #ffffff;
+        --ink-soft: #3f5365;
+        --line: #c4d9e1;
+        --warning: #fff4d5;
+        --warning-line: #e4bd56;
+        --focus: rgba(85, 214, 194, 0.42);
+        --content: 76rem;
+        --reading: 48rem;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+      body {
+        margin: 0;
+        color: var(--navy);
+        background: var(--off-white);
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.7;
+        text-rendering: optimizeLegibility;
+      }
+
+      h1, h2, h3, .brand, .policy-label, .toc-title {
+        font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+      }
+
+      a { color: inherit; }
+      a:focus-visible, summary:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 4px;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 50;
+        top: 0.75rem;
+        left: 0.75rem;
+        transform: translateY(-180%);
+        border-radius: 999px;
+        background: var(--mint);
+        color: var(--navy-deep);
+        padding: 0.75rem 1rem;
+        font-weight: 800;
+      }
+      .skip-link:focus { transform: translateY(0); }
+
+      .progress {
+        position: fixed;
+        z-index: 40;
+        inset: 0 0 auto;
+        height: 3px;
+        background: transparent;
+      }
+      .progress span {
+        display: block;
+        width: var(--progress, 0%);
+        height: 100%;
+        background: linear-gradient(90deg, var(--teal), var(--mint));
+      }
+
+      .container {
+        width: min(calc(100% - 3rem), var(--content));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: relative;
+        z-index: 10;
+        border-bottom: 1px solid rgba(196, 217, 225, 0.72);
+        background: rgba(245, 248, 248, 0.94);
+        backdrop-filter: blur(14px);
+      }
+      .header-inner {
+        min-height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        width: clamp(9.5rem, 14vw, 11.5rem);
+      }
+      .brand-logo {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1280 / 459;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+      }
+      .review-chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--white);
+        padding: 0.55rem 0.85rem;
+        color: var(--teal-deep);
+        font-size: 0.74rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          radial-gradient(circle at 82% 28%, rgba(85, 214, 194, 0.19), transparent 25rem),
+          linear-gradient(135deg, var(--navy-deep), var(--navy));
+        padding-block: clamp(5rem, 11vw, 9rem) clamp(4rem, 8vw, 7rem);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -8rem;
+        bottom: -16rem;
+        width: 34rem;
+        aspect-ratio: 1;
+        border: 1px solid rgba(144, 230, 216, 0.18);
+        border-radius: 42% 58% 64% 36%;
+        transform: rotate(18deg);
+      }
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.38fr);
+        gap: clamp(2rem, 6vw, 6rem);
+        align-items: end;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin: 0 0 1.3rem;
+        color: var(--mint);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .eyebrow::before { content: ""; width: 1.8rem; height: 2px; background: currentColor; }
+      h1 {
+        max-width: 10ch;
+        margin: 0;
+        font-size: clamp(3.35rem, 8vw, 7.7rem);
+        line-height: 0.88;
+        letter-spacing: -0.065em;
+      }
+      .hero-intro {
+        max-width: 46rem;
+        margin: 2rem 0 0;
+        color: #dce9ef;
+        font-size: clamp(1.05rem, 2vw, 1.3rem);
+        line-height: 1.55;
+      }
+      .hero-meta {
+        padding: 1.5rem;
+        border: 1px solid rgba(144, 230, 216, 0.28);
+        border-radius: 1.4rem;
+        background: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(8px);
+      }
+      .hero-meta p { margin: 0; }
+      .hero-meta strong { display: block; margin-bottom: 0.25rem; color: var(--mint-light); font-family: "Manrope", "Segoe UI", sans-serif; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; }
+      .hero-meta p + p { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+
+      .review-banner {
+        margin-top: -2rem;
+        position: relative;
+        z-index: 5;
+      }
+      .review-banner-inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        align-items: start;
+        border: 1px solid var(--warning-line);
+        border-radius: 1.25rem 0.55rem 1.75rem 0.55rem;
+        background: var(--warning);
+        padding: 1.35rem clamp(1.25rem, 3vw, 2rem);
+        box-shadow: 0 12px 28px rgba(16, 42, 67, 0.07);
+      }
+      .review-icon {
+        width: 2.35rem;
+        height: 2.35rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--navy);
+        color: var(--white);
+        font-weight: 850;
+      }
+      .review-banner h2 { margin: 0; font-size: 1rem; }
+      .review-banner p { margin: 0.35rem 0 0; color: #665329; font-size: 0.92rem; }
+
+      .mobile-toc { display: none; }
+      .policy-shell {
+        display: grid;
+        grid-template-columns: 16rem minmax(0, var(--reading));
+        gap: clamp(3rem, 7vw, 7rem);
+        justify-content: center;
+        padding-block: clamp(5rem, 10vw, 9rem);
+      }
+      .toc { position: sticky; top: 2rem; align-self: start; }
+      .toc-title { margin: 0 0 1.1rem; font-size: 0.78rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+      .toc ol { margin: 0; padding: 0; list-style: none; }
+      .toc a {
+        display: grid;
+        grid-template-columns: 1.75rem 1fr;
+        gap: 0.55rem;
+        border-left: 2px solid var(--line);
+        padding: 0.55rem 0.65rem;
+        color: var(--ink-soft);
+        font-size: 0.82rem;
+        line-height: 1.35;
+        text-decoration: none;
+      }
+      .toc a span { color: var(--teal); font-weight: 800; }
+      .toc a:hover, .toc a[aria-current="true"] { border-left-color: var(--mint); background: var(--ice); color: var(--navy); }
+
+      .policy-document { min-width: 0; }
+      .policy-lead {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: clamp(3rem, 7vw, 5rem);
+      }
+      .policy-lead p { margin: 0 0 1.15rem; color: var(--ink-soft); font-size: 1.08rem; }
+      .policy-lead p:first-child { color: var(--navy); font-size: 1.3rem; font-weight: 650; }
+
+      .policy-section {
+        border-bottom: 1px solid var(--line);
+        padding-block: clamp(3.5rem, 7vw, 5.5rem);
+      }
+      .section-heading { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; align-items: start; margin-bottom: 2rem; }
+      .section-index {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: grid;
+        place-items: center;
+        border-radius: 0.85rem 0.25rem 0.85rem 0.25rem;
+        background: var(--teal);
+        color: var(--white);
+        font-size: 0.78rem;
+        font-weight: 850;
+      }
+      .policy-section h2 { margin: 0; font-size: clamp(1.75rem, 4vw, 2.65rem); line-height: 1.1; letter-spacing: -0.035em; }
+      .policy-section h3 { margin: 2.2rem 0 0.65rem; font-size: 1.12rem; }
+      .policy-section p { margin: 0 0 1.15rem; color: var(--ink-soft); }
+      .policy-section ul { margin: 1rem 0 1.5rem; padding-left: 1.25rem; }
+      .policy-section li { margin-bottom: 0.75rem; padding-left: 0.25rem; color: var(--ink-soft); }
+      .policy-section strong { color: var(--navy); }
+
+      .review-note {
+        margin: 1.75rem 0;
+        border-left: 4px solid var(--warning-line);
+        background: #fffaf0;
+        padding: 1rem 1.15rem;
+        color: #665329;
+        font-size: 0.88rem;
+      }
+      .review-note strong { color: #4e3d17; }
+
+      .data-list { display: grid; gap: 0.8rem; margin-block: 1.5rem 2.25rem; }
+      .data-item {
+        border: 1px solid var(--line);
+        border-radius: 1rem 0.4rem 1.5rem 0.4rem;
+        background: var(--white);
+        padding: 1.15rem 1.25rem;
+      }
+      .data-item h3 { margin: 0 0 0.4rem; color: var(--teal-deep); }
+      .data-item p { margin: 0; }
+
+      .legal-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 1.5rem 0 2rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem 0.45rem 1.5rem 0.45rem;
+        overflow: hidden;
+        background: var(--white);
+      }
+      .legal-table th, .legal-table td { padding: 1rem 1.1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+      .legal-table th { background: var(--navy); color: var(--white); font-family: "Manrope", "Segoe UI", sans-serif; font-size: 0.82rem; }
+      .legal-table td { color: var(--ink-soft); font-size: 0.9rem; }
+      .legal-table tr:last-child td { border-bottom: 0; }
+
+      .contact-card {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem 0.65rem 2.5rem 0.65rem;
+        background: linear-gradient(145deg, var(--navy), #164a59);
+        color: var(--white);
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+      }
+      .contact-card span { color: var(--mint); font-size: 0.72rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+      .contact-card h3 { margin: 0.55rem 0 1.2rem; font-size: 1.8rem; }
+      .contact-card dl { display: grid; grid-template-columns: 7rem 1fr; gap: 0.75rem 1rem; margin: 0; }
+      .contact-card dt { color: var(--mint-light); font-weight: 750; }
+      .contact-card dd { margin: 0; overflow-wrap: anywhere; }
+      .contact-card a { color: var(--white); text-underline-offset: 0.2em; }
+
+      .site-footer { background: var(--navy-deep); color: var(--white); padding-block: 2rem; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+      .footer-inner p { margin: 0; color: #bcd0d8; font-size: 0.84rem; }
+      .footer-inner a { color: var(--mint-light); font-weight: 750; text-underline-offset: 0.2em; }
+
+      @media (max-width: 860px) {
+        .hero-grid { grid-template-columns: 1fr; }
+        .hero-meta { max-width: 32rem; }
+        .policy-shell { grid-template-columns: 1fr; }
+        .toc { display: none; }
+        .mobile-toc { display: block; margin: 0 0 2rem; }
+        .mobile-toc details { border: 1px solid var(--line); border-radius: 1rem 0.4rem 1.5rem 0.4rem; background: var(--white); }
+        .mobile-toc summary { cursor: pointer; padding: 1rem 1.1rem; color: var(--navy); font-weight: 800; }
+        .mobile-toc ol { margin: 0; padding: 0 1rem 1rem 2.7rem; }
+        .mobile-toc a { display: block; padding: 0.3rem; color: var(--teal-deep); }
+      }
+
+      @media (max-width: 620px) {
+        .container { width: min(calc(100% - 2rem), var(--content)); }
+        .header-inner { min-height: 5rem; gap: 0.75rem; }
+        .brand { width: 7.5rem; }
+        .review-chip { padding: 0.42rem 0.6rem; font-size: 0.63rem; white-space: nowrap; }
+        h1 { font-size: clamp(3rem, 18vw, 4.8rem); }
+        .review-banner-inner { grid-template-columns: 1fr; }
+        .section-heading { grid-template-columns: 1fr; }
+        .legal-table, .legal-table tbody, .legal-table tr, .legal-table td { display: block; width: 100%; }
+        .legal-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+        .legal-table tr { border-bottom: 1px solid var(--line); padding: 0.35rem 0; }
+        .legal-table td { border: 0; padding: 0.75rem 1rem; }
+        .legal-table td::before { content: attr(data-label); display: block; margin-bottom: 0.25rem; color: var(--teal-deep); font-size: 0.68rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+        .contact-card dl { grid-template-columns: 1fr; gap: 0.2rem; }
+        .contact-card dd { margin-bottom: 0.8rem; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+
+      @media print {
+        .progress, .skip-link, .review-banner, .toc, .mobile-toc, .site-footer { display: none !important; }
+        body { background: #fff; color: #000; font-size: 10.5pt; }
+        .site-header { position: static; background: #fff; }
+        .hero { background: #fff; padding-block: 2rem; }
+        .hero::after { display: none; }
+        .hero-grid, .policy-shell { display: block; }
+        .hero-meta { margin-top: 1rem; border-color: #999; }
+        .hero-intro, .hero-meta p { color: #222; }
+        .policy-section { break-inside: avoid; }
+        .contact-card { background: #fff; color: #000; border: 1px solid #999; }
+        .contact-card a, .contact-card dt, .contact-card span { color: #000; }
+      }
+    </style>
+    <script>document.documentElement.classList.add("js");</script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#policy-content">Skip to privacy policy</a>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img class="brand-logo" src="../assets/embedtek-logo.jpeg" alt="EmbedTek Design" width="1280" height="459">
+        </div>
+        <span class="review-chip">Standalone review draft</span>
+      </div>
+    </header>
+
+    <main id="policy-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Legal information</p>
+            <h1 id="page-title">Privacy policy.</h1>
+            <p class="hero-intro">How Embedtek describes the collection, use, protection and handling of personal information, presented for review before legal approval and website integration.</p>
+          </div>
+          <div class="hero-meta" aria-label="Policy details">
+            <p><strong>Last updated</strong>19 February 2026</p>
+            <p><strong>Status</strong>Draft supplied for legal and operational review</p>
+            <p><strong>Scope</strong>Website and application wording — confirmation required</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="review-banner" aria-labelledby="review-title">
+        <div class="container review-banner-inner">
+          <span class="review-icon" aria-hidden="true">!</span>
+          <div>
+            <h2 id="review-title">Review required before publication</h2>
+            <p>The supplied wording includes an application, user accounts, payments, analytics, advertising, United States hosting and an unconfirmed company address. The legal entity, service scope, data practices, contact email and jurisdiction must be verified before this draft becomes public.</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="container policy-shell">
+        <aside class="toc" aria-label="Privacy policy table of contents">
+          <p class="toc-title">On this page</p>
+          <ol>
+            <li><a href="#information"><span>01</span>Information we collect</a></li>
+            <li><a href="#use"><span>02</span>How information is used</a></li>
+            <li><a href="#not-covered"><span>03</span>Information not covered</a></li>
+            <li><a href="#retention"><span>04</span>Data retention</a></li>
+            <li><a href="#rights"><span>05</span>Data rights</a></li>
+            <li><a href="#security"><span>06</span>Security</a></li>
+            <li><a href="#international"><span>07</span>International audience</a></li>
+            <li><a href="#children"><span>08</span>Children’s privacy</a></li>
+            <li><a href="#changes"><span>09</span>Changes</a></li>
+            <li><a href="#queries"><span>10</span>Your queries</a></li>
+          </ol>
+        </aside>
+
+        <article class="policy-document">
+          <nav class="mobile-toc" aria-label="Privacy policy sections">
+            <details>
+              <summary>Jump to a section</summary>
+              <ol>
+                <li><a href="#information">Information we collect</a></li>
+                <li><a href="#use">How information is used</a></li>
+                <li><a href="#not-covered">Information not covered</a></li>
+                <li><a href="#retention">Data retention</a></li>
+                <li><a href="#rights">Data rights</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#international">International audience</a></li>
+                <li><a href="#children">Children’s privacy</a></li>
+                <li><a href="#changes">Changes</a></li>
+                <li><a href="#queries">Your queries</a></li>
+              </ol>
+            </details>
+          </nav>
+          <header class="policy-lead">
+            <p>We value your (“User,” “You,” or “Your”) privacy and recognize the sensitivity of your personal information.</p>
+            <p>We are committed to protecting your personal information and using it only as appropriate to provide you with the best possible service, products and opportunities, as described in this Privacy Policy.</p>
+            <p>This Privacy Policy explains the online information practices of embedtek Private Limited (collectively, “Company,” “embedtek,” “embedtek App,” “we,” “us,” or “our”), which hosts the website identified in the supplied policy and the mobile application embedtek (collectively, the “Application”). It explains what information we collect, what we do with it and the rights you may have with respect to the data.</p>
+            <p>When using the Application, this Privacy Policy should be read together with the Terms of Use. By accessing the Application, you acknowledge that the Privacy Policy and Terms of Use govern your use of the Application.</p>
+            <p>The controller of your personal information is embedtek. The Company may provide products and services through affiliated companies. Affiliates may act as a Data Controller for personal information processed, used and stored as part of services and activities conducted by an embedtek affiliate. Certain services and activities may be conducted by several affiliates.</p>
+            <p>Privacy and personal-data-protection principles vary between countries. When you access a third-party website or application, you are subject to that third party’s privacy policy. Review that policy to understand the practices applying to information maintained by the third-party service.</p>
+          </header>
+
+          <section class="policy-section" id="information" aria-labelledby="information-title">
+            <header class="section-heading"><span class="section-index">01</span><h2 id="information-title">What information we collect and how it is used</h2></header>
+            <p>We may collect and hold personal information related to you that is necessary for conducting our business, including delivering products, services or information, improving our services and fulfilling regulatory obligations. When we request information, we will explain whether providing it is a statutory or contractual requirement and the consequences of not providing it.</p>
+            <aside class="review-note"><strong>Applicability check:</strong> The following account, upload, location, payment, advertising and analytics statements come from the supplied policy and require confirmation against the actual Embedtek website and application.</aside>
+
+            <div class="data-list">
+              <article class="data-item"><h3>User profile</h3><p>If you register for an account, we may collect your email address, username and password. The supplied policy also references registration through Facebook or Google and states that only your name and email address are collected from those services.</p></article>
+              <article class="data-item"><h3>User content</h3><p>We may collect content you create, share or post to the Application, including account information, photos, image files and associated metadata. Content shared publicly may be downloadable by other users. Avoid uploading images with embedded location data and do not include financial account numbers, social-security numbers or other sensitive information in submissions.</p></article>
+              <article class="data-item"><h3>Support and enquiries</h3><p>We may collect information submitted when you contact customer support or otherwise contact the Company, including your email address, name, attachments and other information included in the communication.</p></article>
+              <article class="data-item"><h3>Location information</h3><p>Depending on device settings or permissions, the supplied policy states that location information may be collected using geolocation technology.</p></article>
+              <article class="data-item"><h3>Financial data</h3><p>The supplied policy states that Stripe processes financial transactions and that embedtek is not provided personal transaction data. It also refers to possible future use of Apple and Google if the Application becomes available through their stores.</p></article>
+              <article class="data-item"><h3>Device and internet usage</h3><p>If you download the Application, information may be collected from the device, including identifiers used to recognize hardware and operating-system characteristics.</p></article>
+              <article class="data-item"><h3>Cookies and tracking</h3><p>The supplied policy describes cookies used to provide features, measure activity, understand page use, improve services and remember preferences. It also refers to Google Analytics, third-party tracking, analytics vendors and advertising networks. Third-party practices are governed by their own privacy policies and are not covered by this policy.</p></article>
+            </div>
+            <p>The supplied policy states that some devices may offer a “Do Not Track” feature and that the Application does not respond to “Do Not Track” signals.</p>
+          </section>
+
+          <section class="policy-section" id="use" aria-labelledby="use-title">
+            <header class="section-heading"><span class="section-index">02</span><h2 id="use-title">How information is used</h2></header>
+            <table class="legal-table">
+              <thead><tr><th scope="col">Purpose</th><th scope="col">Legal basis stated in the supplied policy</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Purpose">Provide support and respond to requests and enquiries.</td><td data-label="Legal basis">Legitimate interest in responding to requests and enquiries for ongoing business administration.</td></tr>
+                <tr><td data-label="Purpose">Personalize visits, assist use, deliver services and understand how the Application is used.</td><td data-label="Legal basis">Legitimate interest in providing and improving the Application.</td></tr>
+                <tr><td data-label="Purpose">Share data with service providers, including hosting providers.</td><td data-label="Legal basis">Legitimate interest in using vendors to provide business services.</td></tr>
+                <tr><td data-label="Purpose">Share data with affiliates.</td><td data-label="Legal basis">Legitimate interest in improving services.</td></tr>
+                <tr><td data-label="Purpose">Market products and services and enable third-party advertising.</td><td data-label="Legal basis">Legitimate interest in promoting products and services and generating advertising revenue, with choices regarding an advertising-supported application option.</td></tr>
+                <tr><td data-label="Purpose">Respond to law-enforcement or government requests and comply with legal demands or court orders.</td><td data-label="Legal basis">Legitimate interest in complying with applicable legal or regulatory obligations. Notice will be provided when permitted.</td></tr>
+                <tr><td data-label="Purpose">Operate and manage the business, protect legal interests and support a potential acquisition or succession.</td><td data-label="Legal basis">Legitimate interest in maintaining, improving and strengthening business operations.</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Your right to object:</strong> You may have the right to object when processing of your personal information is carried out for our legitimate interests.</p>
+          </section>
+
+          <section class="policy-section" id="not-covered" aria-labelledby="not-covered-title">
+            <header class="section-heading"><span class="section-index">03</span><h2 id="not-covered-title">Information not covered by this policy</h2></header>
+            <p>The supplied policy states that the Application may allow communication with other users and posting through message boards or similar features. It states that information provided through those features is not protected by this Privacy Policy and advises users to review the privacy practices of relevant third parties before sharing information.</p>
+            <aside class="review-note"><strong>Applicability check:</strong> Confirm whether user-to-user communication, public posting or message-board features exist before retaining this section.</aside>
+          </section>
+
+          <section class="policy-section" id="retention" aria-labelledby="retention-title">
+            <header class="section-heading"><span class="section-index">04</span><h2 id="retention-title">Data retention</h2></header>
+            <p>We retain personal information for as long as it is necessary and relevant for the business. Criteria used to determine retention periods include:</p>
+            <ul>
+              <li>How long the information is needed to provide services and operate the business.</li>
+              <li>The type of personal information collected.</li>
+              <li>Whether a legal, contractual or similar obligation requires retention, including applicable laws, preservation orders, litigation or dispute requirements.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section" id="rights" aria-labelledby="rights-title">
+            <header class="section-heading"><span class="section-index">05</span><h2 id="rights-title">Data rights</h2></header>
+            <p>Subject to applicable limitations, the supplied policy states that you may have the right to:</p>
+            <ul>
+              <li>Request access to personal information held about you.</li>
+              <li>Correct personal information that is incorrect, out of date or incomplete.</li>
+              <li>Request deletion of your personal information.</li>
+              <li>Opt out of marketing communications and object when there is no legitimate reason to use or hold your information.</li>
+              <li>Request portability of your information by receiving a digital copy or asking for it to be provided to a third party.</li>
+              <li>Withdraw consent at any time when consent is the basis for handling your information.</li>
+            </ul>
+            <p>The supplied policy states that personal information is not sold to third parties for their own business or commercial use. Requests should be made using the contact information below. Deletion may affect access to certain parts of the Application.</p>
+            <p>The supplied policy states that requests will be answered as soon as practicable and within one month of receipt, with a possible two-month extension in exceptional cases. It also states that proof of identity may be requested.</p>
+            <aside class="review-note"><strong>Legal review:</strong> Confirm that the stated rights, response periods and identity-verification process match the jurisdictions and operating procedures that apply to Embedtek.</aside>
+          </section>
+
+          <section class="policy-section" id="security" aria-labelledby="security-title">
+            <header class="section-heading"><span class="section-index">06</span><h2 id="security-title">Security</h2></header>
+            <p>The supplied policy states that security standards and procedures are maintained to prevent unauthorized access, including commercially reasonable measures such as data encryption, firewalls and server authentication. It also states that staff and support providers are required to observe privacy standards and may be audited for compliance.</p>
+            <p>No security defence is impenetrable. The security of applications, servers or databases cannot be guaranteed, and information transmitted over the internet may be intercepted.</p>
+            <aside class="review-note"><strong>Operational confirmation:</strong> Encryption, firewall, server-authentication, staff-control and audit claims must be verified before publication.</aside>
+          </section>
+
+          <section class="policy-section" id="international" aria-labelledby="international-title">
+            <header class="section-heading"><span class="section-index">07</span><h2 id="international-title">International audience</h2></header>
+            <p>The supplied policy states that the Application is hosted in the United States and that personal information collected through it is transferred to the United States. It explains that this transfer may not provide the same level of protection available in other jurisdictions and identifies a legitimate interest in using United States service providers.</p>
+            <p>It advises users not to use the Application if they do not agree to the transfer and processing of personal information in the United States or if doing so is illegal in their home country.</p>
+            <aside class="review-note"><strong>Hosting confirmation:</strong> The actual website, email, analytics, application and future form-provider hosting locations must be confirmed before retaining this wording.</aside>
+          </section>
+
+          <section class="policy-section" id="children" aria-labelledby="children-title">
+            <header class="section-heading"><span class="section-index">08</span><h2 id="children-title">Children’s privacy</h2></header>
+            <p>The supplied policy states that personal information is not knowingly collected from children under 16 and that information identified as having been provided by a child under 16 will be deleted as soon as possible.</p>
+          </section>
+
+          <section class="policy-section" id="changes" aria-labelledby="changes-title">
+            <header class="section-heading"><span class="section-index">09</span><h2 id="changes-title">Changes to this policy</h2></header>
+            <p>This Privacy Policy describes current policies and the stated commitment to privacy. The content or services of the Application may change, and the Privacy Policy may therefore be updated. Important updates will be posted at the policy’s published location.</p>
+          </section>
+
+          <section class="policy-section" id="queries" aria-labelledby="queries-title">
+            <header class="section-heading"><span class="section-index">10</span><h2 id="queries-title">Your queries</h2></header>
+            <p>If you have a privacy question or wish to exercise a data right described above, contact the Company using the details below. The supplied policy also states that telephone calls may be monitored or recorded for accuracy, service improvement and security.</p>
+            <div class="contact-card">
+              <span>Privacy contact</span>
+              <h3>embedtek Private Limited.</h3>
+              <dl>
+                <dt>Address</dt><dd>To be confirmed</dd>
+                <dt>Email</dt><dd><a href="mailto:sales@embedtekdesign.com">sales@embedtekdesign.com</a></dd>
+              </dl>
+            </div>
+            <aside class="review-note"><strong>Contact confirmation:</strong> The supplied address is blank, and the supplied email differs from the email currently shown on the website. Confirm both before publication.</aside>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© Embedtek. Standalone privacy-policy review draft.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const progress = document.querySelector(".progress span");
+        const links = Array.from(document.querySelectorAll(".toc a"));
+        const sections = links.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+
+        const updateProgress = () => {
+          const root = document.documentElement;
+          const available = Math.max(1, root.scrollHeight - innerHeight);
+          const value = Math.min(100, Math.max(0, (scrollY / available) * 100));
+          progress?.style.setProperty("--progress", `${value.toFixed(2)}%`);
+        };
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver((entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+            if (!visible) return;
+            links.forEach((link) => {
+              if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "true");
+              else link.removeAttribute("aria-current");
+            });
+          }, { rootMargin: "-18% 0px -68%", threshold: [0, 0.1] });
+          sections.forEach((section) => observer.observe(section));
+        }
+
+        addEventListener("scroll", updateProgress, { passive: true });
+        addEventListener("resize", updateProgress, { passive: true });
+        updateProgress();
+      })();
+    </script>
+  </body>
+</html>
