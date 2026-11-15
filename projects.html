@@ -3964,6 +3964,7 @@ h3 {
                 <a href="mailto:sales@embedtexdesign.com">
                   <span>Email</span>
                   <strong>sales@embedtexdesign.com</strong>
+                  <span>Response within 24 hours</span>
                 </a>
               </address>
             </div>
@@ -3971,7 +3972,7 @@ h3 {
             <form class="enquiry-form" id="enquiry-form" novalidate>
               <div class="form-heading">
                 <p class="route-heading">Start a project discussion</p>
-                <p id="form-help">Required fields are marked with an asterisk. Submitting prepares an email for you to review and send.</p>
+                <p id="form-help">Required fields are marked with an asterisk. Submitting prepares an email for you to review and send. Our team responds within 24 hours after you send it.</p>
               </div>
 
               <div class="form-grid">
@@ -4004,7 +4005,7 @@ h3 {
 
               <button class="button button-mint form-submit" type="submit">Prepare email enquiry <span aria-hidden="true">→</span></button>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-              <p class="prototype-note">No server-side form endpoint is configured. Your email application must open and you must send the prepared message to complete the enquiry. No response-time promise is currently published.</p>
+              <p class="prototype-note">Your email application must open and you must send the prepared message to complete the enquiry. Embedtek responds within 24 hours after you send it.</p>
             </form>
           </div>
         </div>
@@ -4254,7 +4255,7 @@ h3 {
       ].join("\n");
 
       if (formStatus) {
-        formStatus.textContent = "Your email application is opening. Review and send the prepared message to complete your enquiry.";
+        formStatus.textContent = "Your email application is opening. Review and send the prepared message to complete your enquiry. Once sent, our team responds within 24 hours.";
       }
 
       window.location.href = `mailto:sales@embedtexdesign.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
